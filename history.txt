@@ -1,0 +1,102 @@
+    1  ssh-keygen -t rsa -b 4095 -c "varunmanila89@gmail.com"
+    2  ssh-keygen -t rsa -b 4096 -C "varunmanila89@gmail.com"
+    3  eval $(ssh-agent -s)
+    4  ssh-add ~.ssh/id_rsa
+    5  ssh-add ~/.ssh/id_rsa
+    6  ssh-add ~/.ssh/id_rsa
+    7  clip < ~/.ssh/id_rsa.pub
+    8  git init
+    9  git init
+   10  git add .
+   11  git commit -m "first comment"
+   12  git commit -m "first comment"
+   13  git commit -m "first comment"
+   14  git config --global user.email "varunmanila89@gmail.com"
+   15  git commit -m "first comment"
+   16  git remote add origin https://github.com/varunmanila/POS-System.giit
+   17  git push origin master
+   18  git remote add origin github.com/varunmanila/POS-System.giit
+   19  git push origin master
+   20  git remote add origin git@github.com/varunmanila/POS-System.giit
+   21  git remote add origin git@github.com/varunmanila/POS-System.git
+   22  git push origin master
+   23  git remote set-url origin git@github.com:/varunmanila/POS-System.git
+   24  git push origin master
+   25  git push origin master
+   26  ssh-add ~/.ssh/id_rsa
+   27  ssh-add ~/.ssh/id_rsa
+   28  ssh-keygen
+   29  git push origin master
+   30  ssh-add ~/.ssh/id_rsa
+   31  eval $(ssh-agent -s)
+   32  ssh-add ~/.ssh/id_rsa:
+   33  git init
+   34  git add.
+   35  git add .
+   36  git add .
+   37  git commit -m "first comment"
+   38  git remote add origin git@github.com/varunmanila/POS-System.git
+   39  git push origin master
+   40  git push origin master
+   41  git remote set-url git@github.com/varunmanila/POS-System.git:C:\Users\Varun K\.ssh\id_rsa
+   42  git remove origin master
+   43  git push
+   44  git push origin master
+   45  git remote set-url git@github.com/varunmanila/POS-System.git:/c/xampp/htdocs/POS
+   46  git remote set-url git@github.com/varunmanila/POS-System.git:/c/xampp/htdocs/POS --push
+   47  git remote set-url git@github.com/varunmanila/POS-System.git:/c/xampp/htdocs/POS --add
+   48  git push origin master
+   49  git add .
+   50  git add .
+   51  git init
+   52  git add .
+   53  git commit -m "comments"
+   54  ssh-keygen -t rsa -b 4096 -C "varunmanila89@gmail.com"
+   55  eval $(ssh-agent -s)
+   56  ssh-keygen -t rsa -b 4096 -C "varunmanila89@gmail.com
+   57  quit
+   58   ssh-keygen -t rsa -b 4096 -C "varunmanila89@gmail.com
+   59  exit
+   60  ssh-keygen -t rsa -b 4096 -C "varunmanila89@gmail.com"
+   61  eval $(ssh-agent -s)
+   62  ssh-add ~/.ssh/id_rsa
+   63  clip < ~/.ssh/id_rsa.pub
+   64  git init
+   65  git add .
+   66  git init
+   67  git add .
+   68  git commit 
+   69  git init
+   70  git info
+   71  git --help
+   72  git show
+   73  git commit -m "comments"
+   74  git clone
+   75  git info
+   76  git --help
+   77  git statua
+   78  git status
+   79  git add /c/xampp/htdocs/POS/
+   80  git add /c/xampp/htdocs/POS/*
+   81  git add /c/xampp/htdocs/POS/*
+   82  git add /c/xampp/htdocs/POS/..
+   83  git add /c/xampp/htdocs/POS/.
+   84  git commit
+   85  git add /c/xampp/htdocs/POS/.
+   86  git add --all
+   87  git status
+   88  cat .gitignore
+   89  git add --force
+   90  git add --force
+   91  git status
+   92  rm -rf .git/
+   93  git add /c/xampp/htdocs/POS/.
+   94  git add .
+   95  git commit -m "first_comment" 
+   96  git pushP origin master
+   97  git push origin master
+   98  git pupush
+   99  git push origin master
+  100  git add .
+  101  history
+  102  history > history.txt
