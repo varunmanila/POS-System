@@ -61,5 +61,6 @@ class categorycontroller{
 		$table ="category";
 		$responce = categorymodel::mdlShowCategory($table, $item, $value);
 		return $responce;
+		
 	}
 }

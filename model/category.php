@@ -60,7 +60,7 @@
                        <td>'.($key+1).'</td>
                        <td> '.$value["category"].'</td>
                      <td class="btn-group">
-                         <button class="btn btn-success btn-xs activate" >Add</button>
+                         <button class="btn btn-success btn-xs activate" data-toggle="modal" data-target="#modelCategory" >Add</button>
                          <button class="btn btn-danger btn-xs activate "  >Delete</button>
                        </td>
                      </tr>';
