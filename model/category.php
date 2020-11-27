@@ -139,5 +139,48 @@
     
     </div>
   </div>
+  <div class="modal fade" id="modelCategory" tabindex="-1" role="dialog" aria-labelledby="modalCategory"
+  aria-hidden="true">
+  <form role="form"  method="POST"  >
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modelCategory">Edit Category</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <div class="box-body">
+     
+         <div class="form-group">
+            <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1"><i class="fa fa-th "> </i></span>
+            </div>
+            <input type="text" class="form-control" placeholder=" Add Category" aria-label="name" name="category_name" id="category_name" aria-describedby="basic-addon1">
+          </div>
+        </div>
+
+         </div>
+
+       </div>
+    
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger pull-left" data-dismiss="modal">Close</button>
+        
+       <button type="submit" id="edituser" name="edituser" class="btn btn-primary">Save Category</button>      </div>
+       <?php
+       $createCategory = new categorycontroller();
+       $createCategory -> ctrcreateCategory();
+       ?>
+
+    
+    </div>
+  </div>
+    
+</form>
+</div>
+
     
     
