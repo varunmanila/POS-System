@@ -104,9 +104,20 @@
                   <p>User
                    <i class="right fas fa-angle-left"></i></p>
                 </a>
+
+              </li>
+              <li  class="nav-item">
+                <a href="category" class="nav-link">
+              <i class="nav-icon fas fa-copy"></i>
+              <p>
+                Category
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
               </li>
              
               <li class="nav-item has-treeview">
+                 
             <a href="sales" class="nav-link">
               <i class="nav-icon fas fa-copy"></i>
               <p>

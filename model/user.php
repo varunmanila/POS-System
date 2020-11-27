@@ -67,14 +67,19 @@
                               else{
                                  echo' <td><img src="views/img/logo/user.png" class="img-thumbnail" width="40px">
                                 </td>';} 
-                              echo '<td>'.$value['profile'].'</td>
-                              <td>'.$value['status'].'</td>
+                              echo '<td>'.$value['profile'].'</td>';
+                              if($value['status']!= 0){
+                                echo '<td><button class="btn btn-success btn-xs activate "iduser="'.$value['id'].'" statususer="0" >Active</button></td>';
+                              }
+                              else{
+                                echo '<td><button class="btn btn-danger btn-xs activate " iduser="'.$value['id'].'" statususer="1">Inactive</button></td>';
+                              }
                               
-                             <td>'.$value['last_login'].'</td>
+                            echo '<td>'.$value['last_login'].'</td>
                               <td><div class="btn-group">
                               <button class=" btn btn-info btnedituser" iduser = "'.$value['id'].'" data-toggle="modal" data-target="#editmodal">
                              <i class="fas fa-edit"></i></button>
-                               <button class=" btn btn-danger"> <i class="fa fa-times"></i> </button>
+                               <button class=" btn btn-danger btnDeleteUser"> <i class="fa fa-times" id="'.$value['id'].'" picture ="'.$value['picture'].'" user="'.$value['name'].'" ></i> </button>
                                </div></td>
                                 
                               </tr>';
@@ -169,7 +174,7 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-danger pull-left" data-dismiss="modal">Close</button>
         
-       <button type="submit" class="btn btn-primary">Save</button>      </div>
+       <button type="submit" id="edituser" name="edituser" class="btn btn-primary">Save</button>      </div>
 
     
     </div>
@@ -212,7 +217,7 @@
             <div class="input-group-prepend">
               <span class="input-group-text" id="basic-addon1"><i class="fa fa-user "> </i></span>
             </div>
-            <input type="text" class="form-control" value=""  aria-label="name" name="newname" id="newname" aria-describedby="basic-addon1">
+            <input type="text" class="form-control"  aria-label="name" name="newname" id="newname" aria-describedby="basic-addon1">
           </div>
         </div>
 
@@ -223,6 +228,7 @@
               <span class="input-group-text" id="basic-addon1"><i class="fa fa-key"> </i></span>
             </div>
             <input type="password" id="newpassword"  name="newpassword" class="form-control " placeholder="enter a new password" >
+            <input type="hidden" name="newpassword1" id="newpassword1">
           </div>
           </div>
          
@@ -232,11 +238,11 @@
               <span class="input-group-text" id="basic-addon1"><i class="fa fa-key"> </i></span>
             </div>
             <select name="newprofile" id="newprofile"  class="form-control input-group-lg">
-              <option id="editprofile"></option>
-              <option>Admin</option>
-              <option>Seller</option>
-              <option>Developer</option>
-              <option>vender</option>
+              <option id="editprofile" name="editprofile"></option>
+              <option value="Admin">Admin</option>
+              <option value="Seller">Seller</option>
+              <option value="Developer">Developer</option>
+              <option value="Vendor">vender</option>
 
             </select>
 
@@ -246,15 +252,15 @@
             <div class="input-group-prepend">
               <span class="input-group-text" id="basic-addon1">@</span>
             </div>
-            <input type="text" class="form-control" value=""  aria-label="Username" name="newemail"  id="newemail" aria-describedby="basic-addon1">
+            <input type="text" class="form-control"   aria-label="Username" name="newemail"  id="newemail" aria-describedby="basic-addon1">
           </div>
 
            <div class="form-group">
           <div class="pannel">Upload Picture</div>
           <input type="file" class="photo" name="newphoto" id="newphoto">
-          <img src="views/img/logo/icons.png" class="img-thumbnail previous" width="100px">
+          <img src="views/img/logo/icons.png" class="img-thumbnail preview" width="100px">
          
-          
+          <input type="hidden" name="fotoactual" name="fotoactual">
 
            </div>
 
@@ -269,13 +275,26 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-danger pull-left" data-dismiss="modal">Close</button>
         
-       <button type="submit" class="btn btn-primary">Modify user</button>      </div>
+       <button type="submit" name="update" id="update" class="btn btn-primary">Modify user</button>      </div>
+
+
 </div>
+
 </div>
+ <?php 
+         $edituser =new usercontroller();
+         $edituser->ctredituser();
+
+          ?>
 </form>
 </div>
 
     
     </div>
   </div>
+    <?php 
+         $deleteUser =new usercontroller();
+         $deleteUser->ctrDeleteUser();
+
+          ?>
     
