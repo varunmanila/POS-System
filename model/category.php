@@ -60,8 +60,8 @@
                        <td>'.($key+1).'</td>
                        <td> '.$value["category"].'</td>
                      <td class="btn-group">
-                         <button class="btn btn-success btn-xs activate" data-toggle="modal" data-target="#modelCategory" >Add</button>
-                         <button class="btn btn-danger btn-xs activate "  >Delete</button>
+                         <button class="btn btn-success btn-xs btnEditCategory " categoryId="'.$value["id"].'" data-toggle="modal" data-target="#modelCategory" >Edit</button>
+                         <button class="btn btn-danger btn-xs"  >Delete</button>
                        </td>
                      </tr>';
                       }
@@ -158,7 +158,8 @@
             <div class="input-group-prepend">
               <span class="input-group-text" id="basic-addon1"><i class="fa fa-th "> </i></span>
             </div>
-            <input type="text" class="form-control" placeholder=" Add Category" aria-label="name" name="category_name" id="category_name" aria-describedby="basic-addon1">
+            <input type="text" class="form-control"  aria-label="name" name="edit_category"  id="edit_category" aria-describedby="basic-addon1">
+            <input type="hidden" name="idcategory" id="idcategory">
           </div>
         </div>
 
@@ -169,10 +170,10 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-danger pull-left" data-dismiss="modal">Close</button>
         
-       <button type="submit" id="edituser" name="edituser" class="btn btn-primary">Save Category</button>      </div>
+       <button type="submit" id="edit" name="edit" class="btn btn-primary">Save Changes</button>      </div>
        <?php
-       $createCategory = new categorycontroller();
-       $createCategory -> ctrcreateCategory();
+       $editCategory = new categorycontroller();
+       $editCategory ->ctreditCategory();
        ?>
 
     

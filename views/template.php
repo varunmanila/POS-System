@@ -108,6 +108,7 @@ session_start();
 
 <script type="text/javascript" src="views/sweetalert.js" ></script>
 <script type="text/javascript"  src="views/users.js" ></script>
+<script type="text/javascript"  src="views/category.js" ></script>
 
 </body>
 </html>

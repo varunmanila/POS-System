@@ -16,9 +16,10 @@ $ststmt->close();
 $ststmt = null;	
 	}
 
+
 	static public function  mdlShowCategory($table, $item, $value){
 
-if($item != null){
+	if($item != null){
 	 $ststmt = conn::conector()->prepare("SELECT * from $table WHERE $item = :$item");
  	$ststmt->bindParam(":".$item, $value, PDO::PARAM_STR);
  	$ststmt->execute();
@@ -34,6 +35,26 @@ if($item != null){
 	$ststmt->close();
 	$ststmt = null;	
 	}
+
+
+static public function mdlEditCategory($table, $data){
+ $ststmt = conn::conector()->prepare("UPDATE $table SET category = :category where id =:id");
+ $ststmt->bindParam(":category", $data["category"], PDO::PARAM_STR);
+ $ststmt->bindParam(":id", $data["id"], PDO::PARAM_STR);
+
+ if($ststmt->execute()){
+ 	return "ok";
+
+ }else{
+ 	return "error";
+
+ }
+
+$ststmt->close();
+$ststmt = null;	
+	
+	}
+
 }
 	
 

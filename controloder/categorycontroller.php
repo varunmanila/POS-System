@@ -54,13 +54,56 @@ class categorycontroller{
 		}
 	}
 
-
-
 	static public function ctrShowCategories($item, $value){
 
 		$table ="category";
 		$responce = categorymodel::mdlShowCategory($table, $item, $value);
 		return $responce;
 		
+	}
+
+
+	static public function ctreditCategory(){
+		if(isset($_POST["edit_category"])){
+			if(preg_match('/^[a-zA-Z0-9]+$/', $_POST["edit_category"])){
+
+				$table="category";
+				$data =array("category" => $_POST["edit_category"],
+					"id" => $_POST["idcategory"]);
+				$responce = categorymodel::mdlEditCategory($table, $data);
+				if($responce =="ok"){
+
+					echo '<script>
+				swal({
+					type: "Success",
+					title: "Successfully Created",
+					ShowConfirmationButton: true,
+					confirmButtonText: Save,
+					closeOnConfirm: false,
+					}).then((result)=>{
+						if(result.value){
+							window.location = "categories";
+						}
+						})
+
+
+				
+				</script>';
+
+				}
+
+
+
+
+			}
+			else{
+				echo '<script>
+				alert("error");
+				
+				</script>';
+				
+			}
+
+		}
 	}
 }
